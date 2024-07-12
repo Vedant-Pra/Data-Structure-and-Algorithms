@@ -7,6 +7,11 @@ typedef struct rectangle{
     float breath;
 }rectangle;
 
+int min(int a, int b){
+    cout<<"This function is the function pointed by a pointer"<<endl;
+    return a>b?a:b;
+}
+
 int main(){
 
     //Poiter to a variable
@@ -40,5 +45,11 @@ int main(){
     rectPtr2->length=1;
     rectPtr2->breath=2;
     cout<<"Rectagle 2: Lenght: "<<rectPtr2->length<<", "<<"Breath: "<<(*rectPtr2).breath<<endl;
+
+    cout<<"Pointer to a function"<<endl;
+    int (*fp)(int,int);           //pointer must be inside the bracket and and must be followed by bracket
+    fp = min;       
+    cout<<(*fp)(4,5);                //function call. We can pass args in the brackets.
+
 }
 
