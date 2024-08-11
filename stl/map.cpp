@@ -1,8 +1,10 @@
 #include<iostream>
 #include<map>
+#include<unordered_map>
 #include<vector>
 using namespace std;
 int main(){
+    //Ordered Map
     map<int,string> mpp;
     
     // 1. Insertion
@@ -23,18 +25,17 @@ int main(){
     for(auto it: mpp){
         cout<<it.first<<"->"<<it.second<<endl;
     }
-    cout<<endl;
+    cout<<endl<<endl;
 
-
-
-
-    map<int,int> mp;
+    //Unordered Map
+    cout<<"Unordered Map:"<<endl;
+    unordered_map<int,int> mp;
     vector<int> arr = {1,3,4,6,6,3,342523,624,5,342,534,6,57,545,2,43,5,2};
     for(auto it: arr){
         mp[it]++;
     }
-    // for(auto it:mp){
-    //     cout<<it.first<<"->"<<it.second<<endl;
-    // }
+    for(auto it:mp){
+        cout<<it.first<<"->"<<it.second<<endl;
+    }
     
 }
