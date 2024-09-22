@@ -71,6 +71,17 @@ class LinkedList{
                 cout<<"Node deleted."<<endl;
             }
         }
+        void reverseList() {
+            Node* cur = head;
+            Node* prev = nullptr;
+            while(cur){
+                Node* nxt = cur->next;
+                cur->next = prev;
+                prev = cur;
+                cur = nxt;
+            }
+            head = prev;
+        }
         int length(){
             int count = 0;
             Node* cur = head;
@@ -102,5 +113,7 @@ int main(){
     ll.print();
     cout<<ll.length()<<endl;
     cout<<ll.searchNode(10)<<endl;
+    ll.reverseList();
+    ll.print();
 
 }
